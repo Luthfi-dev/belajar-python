@@ -34,13 +34,12 @@ def proses():
     # simpan gambar ke folder
     file = request.files['file']
     filename = str(random.randrange(1,10000)) + ".jpg"
-    g = dataGambar + ".jpg"
-    file.save(os.path.join('gambar', g))
+    file.save(os.path.join('gambar', filename))
     print(filename) #file name ini dalah foto hasil gambar dari upload
     # ==================> KODE PROSES DISINI <=====================
 
     # ==================> END KODE PROSES <========================
-    return render_template("proses.html", data=g)
+    return render_template("proses.html", data=dataGambar)
 
 
 
